@@ -1,0 +1,618 @@
+{
+  "formatVersion": 1,
+  "tdId": "r1.05-td6",
+  "tdLabel": "R1.05 — TD6",
+  "title": "Requêtes avec SQL",
+  "intro": "Formulez, en SQL, sur la base de données exemple, les requêtes d'interrogation suivantes.",
+  "database": {
+    "name": "airbase",
+    "schemaFile": "data/schema.sql",
+    "insertFile": "data/insert.sql"
+  },
+  "canon": {
+    "algo": "sha256",
+    "specVersion": 1
+  },
+  "generated": {
+    "at": "2026-07-05T21:33:39Z",
+    "documentsVersion": "6e4cffc"
+  },
+  "sections": [
+    {
+      "name": "Requêtes simples",
+      "items": [
+        {
+          "type": "question",
+          "id": "q1",
+          "num": "1",
+          "statement": "Donnez la liste des avions dont la capacité est strictement supérieure à 350 passagers.",
+          "expectedCols": 4,
+          "expectedRows": 3,
+          "expectedLabel": "4 attributs, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "10952c4b1a0c6dc655f4c45b94704d9be312b822dc21eb3d883105e46b56a376"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q2",
+          "num": "2",
+          "statement": "Quels sont les numéros et noms des avions localisés à Nice ?",
+          "expectedCols": 2,
+          "expectedRows": 2,
+          "expectedLabel": "2 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "3a846e497de55b0cdfc81578c62c28761ad2f967c8d0839c6e41f72cb2d0ed39"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "projection",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q3",
+          "num": "3",
+          "statement": "Quels sont les numéros des pilotes en service et les villes de départ de leurs vols ?",
+          "expectedCols": 2,
+          "expectedRows": 10,
+          "expectedLabel": "2 attributs, 10 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "d348d03688b2422ed2b1b828b06962e3ea26874e56f2148584914304fe0a62d4"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "projection",
+            "distinct"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q4",
+          "num": "4",
+          "statement": "Quel sont les noms des pilotes domiciliés à Paris ayant un salaire d'au moins 5000 ?",
+          "expectedCols": 1,
+          "expectedRows": 2,
+          "expectedLabel": "1 attribut, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "1927554c467aa52638577e8d14e338720269341deaea8c1ab3563747485fa963"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "projection",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q5",
+          "num": "5",
+          "statement": "Quels sont les numéros et noms d'avions localisés à Nice ou dont la capacité est strictement inférieure à 350 passagers ?",
+          "expectedCols": 2,
+          "expectedRows": 3,
+          "expectedLabel": "2 attributs, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "90f2b4458afd8e377fbeb88414361a69f4ca02a2123ecd3d872265a47e28e73e"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q6",
+          "num": "6",
+          "statement": "Donnez la liste des vols au départ de Nice allant à Paris à partir de 18 heures.",
+          "expectedCols": 7,
+          "expectedRows": 2,
+          "expectedLabel": "7 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "539788294a2e94e2caacab177313bb51cdd830ce7c4f736f8d572d71458c25be"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q7",
+          "num": "7",
+          "statement": "Quels sont les numéros et villes de départ des vols effectués par les pilotes de numéro 100 ou 204 ?",
+          "expectedCols": 2,
+          "expectedRows": 5,
+          "expectedLabel": "2 attributs, 5 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "042a8f7d447730734264969d7192d68d0edc239f2fcf615ef63367283e2fabac"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q8",
+          "num": "8",
+          "statement": "Combien y a-t-il de vols desservant Paris ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "a5af15e73a1d0305845e4215cdee0afac3bf11bc01c410bfadb52de6a5fc8924"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q9",
+          "num": "9",
+          "statement": "Donnez le nombre de pilotes effectuant un vol au départ de Paris.",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "93a6e8ba5aee6b97d3d9d747653dbebee61f2539223bb630e48df4beb7af78b1"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "calcul-vertical",
+            "distinct"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q10",
+          "num": "10",
+          "statement": "Quel est le salaire moyen des pilotes marseillais ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "1e274d2394c6eed6a289b00e42f778f665a8542f19400a027af63272e0494795"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        }
+      ]
+    },
+    {
+      "name": "Requêtes complexes",
+      "items": [
+        {
+          "type": "instruction",
+          "text": "Quand cela possible, formulez les requêtes suivantes de quatre manières différentes (algébrique, prédicative, imbriquée, existentielle)."
+        },
+        {
+          "type": "question",
+          "id": "q11",
+          "num": "11",
+          "statement": "Donnez les numéros des vols effectués au départ de Nice par des pilotes parisiens.",
+          "expectedCols": 1,
+          "expectedRows": 3,
+          "expectedLabel": "1 attribut, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "fcfad7f3ef41fbeb582004a6e982bafa8e3363f2edb8a283e09af014a3c00f2b"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q12",
+          "num": "12",
+          "statement": "Quels sont les numéros, villes de départ, et villes d'arrivée des vols effectués par un avion qui n'est pas localisé à Nice ?",
+          "expectedCols": 3,
+          "expectedRows": 12,
+          "expectedLabel": "3 attributs, 12 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "e9a12403af42dcadbf44cde1763bc8325649702ec4d62b0e72556447a1652a98"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q13",
+          "num": "13",
+          "statement": "Quels sont les numéros des pilotes qui ne sont pas en service ?",
+          "expectedCols": 1,
+          "expectedRows": 2,
+          "expectedLabel": "1 attribut, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "042ca577ccdd105d8aaa0b5303187c659374f202858bcb96fc263b2a02bdc033"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "imbrication",
+            "anti-jointure",
+            "différence"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q14",
+          "num": "14",
+          "statement": "Quels sont les noms et adresses des pilotes assurant au moins un vol au départ de Nice avec des avions de capacité de plus de 300 places ?",
+          "expectedCols": 2,
+          "expectedRows": 4,
+          "expectedLabel": "2 attributs, 4 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "ab56c7e3fab6135653632b2ab35231b274889f156e8c2fac79dc46511c52812e"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q15",
+          "num": "15",
+          "statement": "Quels sont les noms des pilotes domiciliés à Paris assurant des vols au départ de Nice avec des A320 ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "d639d5fe7ba2040f18c934211d88a44a17d18749f570514f5cc7d6b2bf8acfda"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q16",
+          "num": "16",
+          "statement": "Quels sont les numéros des vols effectués par des pilotes niçois au départ ou à l'arrivée de Nice avec des avions localisés à Paris ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "e439f4a95e7b0fbd09b025c0e6672914975670158c118f27e0f4541d92d500bb"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q17",
+          "num": "17",
+          "statement": "Quels sont, à l'exception des pilotes nommés Durand, les noms de pilotes en service ?",
+          "expectedCols": 1,
+          "expectedRows": 5,
+          "expectedLabel": "1 attribut, 5 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "1130343b0ec3b07d3fa79f4aa5f837d27eaf7d803248d4b6d6f4ac763ecd47b7"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q18",
+          "num": "18",
+          "statement": "Quels sont les horaires de départ des vols desservant les villes d'arrivée des vols au départ de Paris ?",
+          "expectedCols": 1,
+          "expectedRows": 7,
+          "expectedLabel": "1 attribut, 7 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "0f93c2f044cc6db0301adcdcf46d41851ba16a16d59c5fe3ffd69ec4ca74c137"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q19",
+          "num": "19",
+          "statement": "Quels sont les numéros et noms des pilotes habitant dans les mêmes villes que les pilotes nommés Martin ?",
+          "expectedCols": 2,
+          "expectedRows": 3,
+          "expectedLabel": "2 attributs, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "cd8119ccd4515b86790020df292fe8e25fe0e403abe9cb9be8afb4818d632420"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q20",
+          "num": "20",
+          "statement": "Quels sont les numéros des avions localisés dans la même ville que l'avion numéro 100 ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "a96a1b37718f4116de4dabca06c74e902eca7876f634569b450045b589c1bcce"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q21",
+          "num": "21",
+          "statement": "Quelles sont les villes de départ de vols dans lesquelles ne réside aucun pilote ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "830204eca536f1c1f266bb92f6de24bd3a865cd9b42c0aa5493bc7ec85cd78b3"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "imbrication",
+            "anti-jointure",
+            "différence"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q22",
+          "num": "22",
+          "statement": "Quels sont les noms des pilotes n'effectuant pas de vol au départ de Lyon ?",
+          "expectedCols": 1,
+          "expectedRows": 6,
+          "expectedLabel": "1 attribut, 6 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "b3f01d12c4ab60e67f0a254f489d24744ee04808a06b991d0a873a8c09064f3d"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "imbrication",
+            "anti-jointure",
+            "différence"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q23",
+          "num": "23",
+          "statement": "Donnez les numéros et noms des pilotes homonymes.",
+          "expectedCols": 2,
+          "expectedRows": 2,
+          "expectedLabel": "2 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "0235e7683d8eaf8fe6e926d85e766301457a09413af63f04c31882cbca4236a5"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q24",
+          "num": "24",
+          "statement": "Quelles sont les villes où habitent des pilotes et où sont localisés des avions ?",
+          "expectedCols": 1,
+          "expectedRows": 4,
+          "expectedLabel": "1 attribut, 4 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "411dd1595878f6c61455d9525b01e67a42ef5929aa85ea95f7ce3d4aa577cb7a"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "intersection",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q25",
+          "num": "25",
+          "statement": "Quels sont les noms des pilotes qui effectuent des vols au départ de leur ville de résidence ?",
+          "expectedCols": 1,
+          "expectedRows": 4,
+          "expectedLabel": "1 attribut, 4 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "1443b92ae53bbf58ade643c30374cbd863427921d20e8eeec59bf3663b705ac3"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "exists"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q26",
+          "num": "26",
+          "statement": "Quels sont les numéros, noms et salaires des pilotes domiciliés dans les mêmes villes que les pilotes nommés Martin tout en ayant un salaire supérieur à eux ?",
+          "expectedCols": 3,
+          "expectedRows": 1,
+          "expectedLabel": "3 attributs, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "906005ef5888151ad5da4a8496df738eaee0f757034e9acef86d2d2470769630"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q27",
+          "num": "27",
+          "statement": "Quels sont les numéros et villes d'arrivée des vols dont l'horaire de départ est le plus tardif ?",
+          "expectedCols": 2,
+          "expectedRows": 1,
+          "expectedLabel": "2 attributs, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "b8c5545a78c94eff37aa4672078e957b085e77840a57fed059fe1e9c9dbc0e64"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "imbrication",
+            "calcul-vertical",
+            "extrémum"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q28",
+          "num": "28",
+          "statement": "Donnez le nombre de vols effectués par les pilotes ayant les plus petits salaires.",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "a5af15e73a1d0305845e4215cdee0afac3bf11bc01c410bfadb52de6a5fc8924"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "calcul-vertical",
+            "extrémum",
+            "exists"
+          ],
+          "sameAs": null
+        }
+      ]
+    }
+  ]
+}
