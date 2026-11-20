@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "tdId": "r1.05-td6",
   "tdLabel": "R1.05 - TD6",
-  "title": "Requêtes avec SQL",
+  "title": "Interrogation en SQL",
   "intro": "Formulez, en SQL, sur la base de données exemple, les requêtes d'interrogation suivantes.",
   "database": {
     "name": "airbase",
@@ -80,7 +80,7 @@
           "type": "question",
           "id": "q4",
           "num": "4",
-          "statement": "Quel sont les noms des pilotes domiciliés à Paris ayant un salaire d'au moins 5000 ?",
+          "statement": "Quels sont les noms des pilotes domiciliés à Paris ayant un salaire d'au moins 5000 ?",
           "expectedCols": 1,
           "expectedRows": 2,
           "expectedLabel": "1 attribut, 2 tuples",
@@ -157,7 +157,7 @@
           "type": "question",
           "id": "q8",
           "num": "8",
-          "statement": "Combien y a-t-il de vols desservant Paris ?",
+          "statement": "Combien y a-t-il de vols à destination de Paris ?",
           "expectedCols": 1,
           "expectedRows": 1,
           "expectedLabel": "1 attribut, 1 tuple",
@@ -218,7 +218,7 @@
       "items": [
         {
           "type": "instruction",
-          "text": "Quand cela possible, formulez les requêtes suivantes de quatre manières différentes (algébrique, prédicative, imbriquée, existentielle)."
+          "text": "Quand cela est possible, formulez les requêtes suivantes de quatre manières différentes (algébrique, prédicative, imbriquée, existentielle)."
         },
         {
           "type": "question",
@@ -377,7 +377,7 @@
           "type": "question",
           "id": "q18",
           "num": "18",
-          "statement": "Quels sont les horaires de départ des vols desservant les villes d'arrivée des vols au départ de Paris ?",
+          "statement": "Quels sont les horaires de départ des vols partant des villes d'arrivée des vols au départ de Paris ?",
           "expectedCols": 1,
           "expectedRows": 7,
           "expectedLabel": "1 attribut, 7 tuples",
@@ -399,7 +399,7 @@
           "type": "question",
           "id": "q19",
           "num": "19",
-          "statement": "Quels sont les numéros et noms des pilotes habitant dans les mêmes villes que les pilotes nommés Martin ?",
+          "statement": "Quels sont les numéros et noms des pilotes habitant dans les mêmes villes que les pilotes nommés Martin (ces derniers exclus) ?",
           "expectedCols": 2,
           "expectedRows": 3,
           "expectedLabel": "2 attributs, 3 tuples",
@@ -421,7 +421,7 @@
           "type": "question",
           "id": "q20",
           "num": "20",
-          "statement": "Quels sont les numéros des avions localisés dans la même ville que l'avion numéro 100 ?",
+          "statement": "Quels sont les numéros des avions localisés dans la même ville que l'avion numéro 100 (celui-ci exclu) ?",
           "expectedCols": 1,
           "expectedRows": 1,
           "expectedLabel": "1 attribut, 1 tuple",
